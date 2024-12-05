@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Results</title>
+</head>
+<body>
+    <h1>Processing Complete</h1>
+    <h2>Download Individual Files</h2>
+    <ul>
+        {% for file in files %}
+        <li><a href="/download/{{ file }}">Download {{ file.split('/')[-1] }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Download Merged File</h2>
+    <a href="/download/{{ merged_file }}">Download Merged Excel</a>
+</body>
+</html>
